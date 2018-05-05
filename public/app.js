@@ -2,7 +2,7 @@ class App extends React.Component {
     render() {
         return(
             <div>
-                <h1>Hello zzz</h1>
+                <h1>Hello zzz {this.props.name} - {this.props.grade} </h1>
                 <Header1 />
             </div>
         );
@@ -21,7 +21,7 @@ class Header1 extends React.Component{
 
 ReactDOM.render( 
     <div>
-        <App />
-        <App />
+        <App name="ReactJS Only" grade="2nd"/>
+        <App name="AngularJS Only" grade="5th"/>
     </div>,
     document.getElementById("root") );
