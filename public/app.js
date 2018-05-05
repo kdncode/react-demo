@@ -1,3 +1,7 @@
+function getName(name){
+    alert(name);
+}
+
 class App extends React.Component {
     constructor(props){
         super(props);
@@ -5,7 +9,7 @@ class App extends React.Component {
     }
 
     getInfo(){
-        alert('helo');
+        alert(this.props.children);
     }
 
     render() {
@@ -13,7 +17,8 @@ class App extends React.Component {
             <div>
                 <h1>Hello zzz {this.props.name} - {this.props.grade} </h1>
                 <p>{this.props.children}</p>
-                <button onClick={this.getInfo}>More Info</button>
+                <button onClick={this.getInfo}>Get Info</button>
+                <button onClick={ () => {getName(this.props.name)} }>Get Name</button>
                 <Header1 />
             </div>
         );
