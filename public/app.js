@@ -14,7 +14,7 @@ class App extends React.Component {
         this.setState( { totalStudents: this.state.totalStudents + 1 } );
     }
 
-    getInfo(){
+    getInfo() {
         alert(this.props.children);
     }
 
@@ -51,4 +51,3 @@ ReactDOM.render(
         <App name="AngularJS Only" grade="5th">$39.99</App>
     </div>,
     document.getElementById("root") );
-
