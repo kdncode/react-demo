@@ -28,6 +28,7 @@ class App extends React.Component {
                 <button onClick={ () => { getName(this.props.name) } }>Get Name</button>
                 <button onClick={ this.addStudent }>Add Student</button>
 
+                // Nested component
                 <Header1 />
             </div>
         );
