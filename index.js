@@ -1,13 +1,13 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
-app.set('view engine', 'ejs')
-app.set('views', './views')
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
 app.get('/', (req, res) => {
-    res.render('home')
+    res.render('home');
 })
 
 app.listen(3000, (req, res) => {
