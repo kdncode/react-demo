@@ -11,7 +11,7 @@ class App extends React.Component {
     }
 
     addStudent() {
-        this.setState( { totalStudents: this.state.totalStudents + 1 } )
+        this.setState( { totalStudents: this.state.totalStudents + 1 } );
     }
 
     getInfo(){
