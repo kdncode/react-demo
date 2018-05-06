@@ -21,9 +21,9 @@ class App extends React.Component {
     render() {
         return(
             <div>
-                <h1>Hello Class {this.props.name} - {this.props.grade} </h1>
-                <p>Total Students: {this.state.totalStudents} </p>
-                <p>{this.props.children}</p>
+                <h1>Hello Class { this.props.name } - { this.props.grade } </h1>
+                <p>Total Students: { this.state.totalStudents } </p>
+                <p>{ this.props.children }</p>
                 <button onClick={ this.getInfo }>Get Info</button>
                 <button onClick={ () => { getName(this.props.name) } }>Get Name</button>
                 <button onClick={ this.addStudent }>Add Student</button>
