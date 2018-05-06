@@ -41,7 +41,7 @@ class Header1 extends React.Component{
             <div>
                 <p>This is a nested react</p>
             </div>
-        )
+        );
     }
 }
 
