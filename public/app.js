@@ -6,6 +6,12 @@ class App extends React.Component {
     constructor(props){
         super(props);
         this.getInfo = this.getInfo.bind(this);
+        this.state = { totalStudents: 10 }
+        this.addStudent = this.addStudent.bind(this);
+    }
+
+    addStudent() {
+        this.setState( { totalStudents: this.state.totalStudents + 1 } )
     }
 
     getInfo(){
@@ -15,10 +21,13 @@ class App extends React.Component {
     render() {
         return(
             <div>
-                <h1>Hello zzz {this.props.name} - {this.props.grade} </h1>
+                <h1>Hello Class {this.props.name} - {this.props.grade} </h1>
+                <p>Total Students: {this.state.totalStudents} </p>
                 <p>{this.props.children}</p>
-                <button onClick={this.getInfo}>Get Info</button>
-                <button onClick={ () => {getName(this.props.name)} }>Get Name</button>
+                <button onClick={ this.getInfo }>Get Info</button>
+                <button onClick={ () => { getName(this.props.name) } }>Get Name</button>
+                <button onClick={ this.addStudent }>Add Student</button>
+
                 <Header1 />
             </div>
         );
@@ -41,3 +50,4 @@ ReactDOM.render(
         <App name="AngularJS Only" grade="5th">$39.99</App>
     </div>,
     document.getElementById("root") );
+
