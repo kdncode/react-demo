@@ -18,6 +18,14 @@ class App extends React.Component {
         alert(this.props.children);
     }
 
+    getInitialState(){
+        return {num: 0}
+    }
+
+    changeStage() {
+        this.setState({ num: this.state.num + 1 })
+    }
+
     render() {
         return(
             <div>
@@ -27,8 +35,9 @@ class App extends React.Component {
                 <button onClick={ this.getInfo }>Get Info</button>
                 <button onClick={ () => { getName(this.props.name) } }>Get Name</button>
                 <button onClick={ this.addStudent }>Add Student</button>
+                <button onClick={ this.changeStage }>Change Stage {this.state.num}</button>
 
-                // Nested component
+                {/* Nested component */}
                 <Header1 />
             </div>
         );
